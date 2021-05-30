@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@primary.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.m0rk4.oop.task.fourth.core.controller.PrimaryController">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                        <Button fx:id="saveButton" mnemonicParsing="false" text="Save" />
+                        <Button fx:id="loadButton" mnemonicParsing="false" text="Load" />
+                        <RadioButton fx:id="binaryRB" mnemonicParsing="false" selected="true" text="Binary">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="fileProcessToggleGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="XML" toggleGroup="$fileProcessToggleGroup" fx:id="xmlRB" />
+                        <RadioButton fx:id="customRB" mnemonicParsing="false" text="Custom" toggleGroup="$fileProcessToggleGroup" />
+                    </items>
+                    <padding>
+                        <Insets left="20.0" right="20.0" />
+                    </padding>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </ToolBar>
+                <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                        <Button fx:id="convertXmlTOJsonButton" mnemonicParsing="false" text="Convert XML to JSON" />
+                        <CheckBox fx:id="archivationCB" mnemonicParsing="false" text="Archivation" />
+                    </items>
+                    <padding>
+                        <Insets left="20.0" right="20.0" />
+                    </padding>
+                </ToolBar>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TreeView fx:id="treeView" prefHeight="360.0" prefWidth="402.0" />
+                <BorderPane fx:id="formBorderPane" prefHeight="360.0" prefWidth="408.0">
+                    <top>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <items>
+                                <RadioButton fx:id="bicycleRB" mnemonicParsing="false" selected="true" text="Bicycle">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="vehiclesToggleGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="cartRB" mnemonicParsing="false" text="Cart" toggleGroup="$vehiclesToggleGroup" />
+                                <RadioButton fx:id="sportCarRB" mnemonicParsing="false" text="Sportcar" toggleGroup="$vehiclesToggleGroup" />
+                                <RadioButton fx:id="tractorRB" mnemonicParsing="false" text="Tractor" toggleGroup="$vehiclesToggleGroup" />
+                                <RadioButton fx:id="motorcycleRB" mnemonicParsing="false" text="Motorcycle" toggleGroup="$vehiclesToggleGroup" />
+                            </items>
+                        </ToolBar>
+                    </top>
+                    <bottom>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <items>
+                                <Button fx:id="addVehicleButton" mnemonicParsing="false" text="Add Vehicle" />
+                                <Button fx:id="saveVehicleButton" mnemonicParsing="false" text="Update Vehicle" />
+                                <Button fx:id="deleteVehicleButton" mnemonicParsing="false" text="Delete Vehicle" />
+                            </items>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </ToolBar>
+                    </bottom>
+                </BorderPane>
+            </children>
+        </HBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,9 @@
+.button {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.text-field {
+    -fx-font-style: italic;
+
+}
